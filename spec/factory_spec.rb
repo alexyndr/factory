@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative '../lib/factory'
+require 'rspec'
 
 RSpec.describe 'Factory' do
   before do
@@ -8,7 +9,7 @@ RSpec.describe 'Factory' do
       Object.send(:remove_const, :Customer)
     end
   end
-
+Struct
   it 'creates factory in a namespace' do
     Factory.new('Customer', :name, :address)
 
