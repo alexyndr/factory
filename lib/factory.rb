@@ -1,22 +1,5 @@
 # frozen_string_literal: true
 
-# * Here you must define your `Factory` class.
-# * Each instance of Factory could be stored into variable. The name of this variable is the name of created Class
-# * Arguments of creatable Factory instance are fields/attributes of created class
-# * The ability to add some methods to this class must be provided while creating a Factory
-# * We must have an ability to get/set the value of attribute like [0], ['attribute_name'], [:attribute_name]
-#
-# * Instance of creatable Factory class should correctly respond to main methods of Struct
-# - each
-# - each_pair
-# - dig
-# - size/length
-# - members
-# - select
-# - to_a
-# - values_at
-# - ==, eql?
-
 class Factory
   #p "#{self} inside factory"
   class << self
@@ -104,17 +87,3 @@ class Factory
     end
   end
 end
-=begin
-  Baku = Factory.new(:eggs, :fruit)
-  p Factory.constants
-  p Baku.constants
-  b = Baku.new(223, 'banana')
-  p b
-  p b.length
-  p b.instance_variables
-
-
-  c = Math.const_set("HIGH_SCHOOL_PI", 22.0/7.0)
-  p c
-  p Math::PI
-=end
